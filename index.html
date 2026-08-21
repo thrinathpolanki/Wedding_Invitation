@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chakravarthi &amp; Radhika - Wedding Invitation</title>
+    <meta name="description" content="Chakravarthi &amp; Radhika - Wedding Invitation · 28th August 2026">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts: exact same families as the original site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/Candlescript.otf" as="font" type="font/otf" crossorigin>
+
+    <!-- Exact compiled stylesheet copied from the original build -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="relative">
+
+        <!-- background music (add your own file at assets/audio/background.mp3) -->
+        <audio id="bg-audio" loop preload="auto">
+          <source src="assets/audio/background2.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" id="music-toggle" aria-label="Mute background music"
+          class="fixed bottom-5 right-5 z-50 h-11 w-11 rounded-full bg-foreground/80 text-cream backdrop-blur shadow-elegant flex items-center justify-center hover:scale-105 transition hidden">
+          <svg id="icon-volume-on" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          <svg id="icon-volume-off" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <!-- ============ INTRO / ENVELOPE SCREEN ============ -->
+        <div id="intro-screen" class="fixed inset-0 z-40 bg-black overflow-hidden cursor-pointer" style="perspective:1200px;">
+
+          <!-- what's behind the flap once it opens -->
+          <div id="envelope-body-bg"></div>
+
+          <!-- the video "card" that slides up out of the envelope -->
+          <div id="intro-video-wrap">
+            <video id="intro-video" playsinline preload="auto">
+              <source src="assets/video/videodesign.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- the envelope flap itself: your envelope photo, hinged at the top -->
+          <img id="intro-poster" src="assets/images/intro-poster.jpg" alt="Wedding invitation envelope" class="absolute inset-0 w-full h-full object-cover">
+
+          <div id="tap-hint" class="absolute inset-x-0 bottom-10 flex justify-center pointer-events-none z-10">
+            <p class="bg-white text-sage-deep font-serif-display italic text-base sm:text-lg tracking-wider px-5 py-2 rounded-full shadow-lg animate-pulse">✦ Tap to open ✦</p>
+          </div>
+        </div>
+
+        <!-- ============ MAIN INVITATION ============ -->
+        <main id="main-content" class="relative animate-fade-in" style="display:none;">
+
+          <section class="w-full flex justify-center bg-cream">
+            <img src="assets/images/homehero.jpg" alt="Wedding Hero" class="w-full h-auto block">
+          </section>
+
+          <!-- Scratch-to-reveal date + countdown -->
+          <section class="relative py-10 px-6 bg-cream">
+            <span class="pointer-events-none absolute top-6 left-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <span class="pointer-events-none absolute top-12 right-6 text-3xl opacity-20 font-emoji">🌸</span>
+            <span class="pointer-events-none absolute bottom-10 left-10 text-3xl opacity-20 font-emoji">🌼</span>
+            <span class="pointer-events-none absolute bottom-6 right-4 text-4xl opacity-20 font-emoji">🌿</span>
+
+            <div class="relative max-w-3xl mx-auto text-center">
+              <div class="my-6 flex items-center justify-center gap-3 text-primary-foreground">
+                <span class="h-px w-16 bg-gold-soft"></span>
+                <span class="text-gold text-lg font-emoji">❀</span>
+                <span class="h-px w-16 bg-gold-soft"></span>
+              </div>
+
+              <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8 mb-10">
+                <div class="relative mx-auto w-full max-w-xl select-none" id="scratch-frame">
+                  <img src="assets/images/countdown-frame.png" alt="" class="block w-full h-auto pointer-events-none select-none" draggable="false">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="relative" id="scratch-card" style="width:80%;height:66%;">
+                      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-1" id="scratch-reveal-content">
+                        <p class="frame-title text-rose-deep text-2xl sm:text-4xl leading-none"><span class="drop-cap">2</span>8th <span class="drop-cap">A</span>ugust 2026</p>
+                        <p class="font-serif-display italic text-sm sm:text-lg text-sage-deep mt-2">9:58 AM</p>
+                        <div class="mt-4 sm:mt-5 w-full">
+                          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:100%;max-width:360px;margin:0 auto;">
+                            <div class="flex flex-col items-center">
+                              <div class="w-full aspect-square rounded-2xl bg-cream shadow-soft flex items-center justify-center backdrop-blur-sm">
+                                <span class="countdown-num text-rose-deep tabular-nums" id="cd-days">00</span>
+                              </div>
+                              <span class="countdown-label mt-1 sm:mt-2 text-sage-deep">Days</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                              <div class="w-full aspect-square rounded-2xl bg-cream shadow-soft flex items-center justify-center backdrop-blur-sm">
+                                <span class="countdown-num text-rose-deep tabular-nums" id="cd-hours">00</span>
+                              </div>
+                              <span class="countdown-label mt-1 sm:mt-2 text-sage-deep">Hours</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                              <div class="w-full aspect-square rounded-2xl bg-cream shadow-soft flex items-center justify-center backdrop-blur-sm">
+                                <span class="countdown-num text-rose-deep tabular-nums" id="cd-minutes">00</span>
+                              </div>
+                              <span class="countdown-label mt-1 sm:mt-2 text-sage-deep">Min</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                              <div class="w-full aspect-square rounded-2xl bg-cream shadow-soft flex items-center justify-center backdrop-blur-sm">
+                                <span class="countdown-num text-rose-deep tabular-nums" id="cd-seconds">00</span>
+                              </div>
+                              <span class="countdown-label mt-1 sm:mt-2 text-sage-deep">Sec</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <canvas id="scratch-canvas" class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing touch-none rounded-lg" width="512" height="343"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 text-xs sm:text-sm tracking-widest uppercase text-sage-deep/70">✦ scratch the card to reveal the date ✦</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Event photo grid -->
+          <section class="relative bg-cream !text-cream py-10 ">
+            <span class="pointer-events-none absolute top-6 left-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <span class="pointer-events-none absolute top-12 right-6 text-3xl opacity-20 font-emoji">🌸</span>
+            <span class="pointer-events-none absolute bottom-10 left-10 text-3xl opacity-20 font-emoji">🌼</span>
+            <span class="pointer-events-none absolute bottom-6 right-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <div class="relative !text-cream max-w-6xl mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center">
+                <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8" data-delay="100">
+                  <button type="button" id="open-gallery-btn" class="block w-full p-0 border-0 bg-transparent cursor-pointer" aria-label="Open the engagement gallery">
+                    <img src="assets/images/engagement.jpg" alt="Event 2 — tap to view the engagement gallery" class="w-full h-auto rounded-2xl border border-gold-soft shadow-elegant object-cover">
+                  </button>
+                </div>
+                <br>
+                <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8" data-delay="200">
+                  <img src="assets/images/mayra.jpg" alt="Event 3" class="w-full h-auto rounded-2xl border border-gold-soft shadow-elegant object-cover">
+                </div>
+                <br>
+                <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8" data-delay="300">
+                  <img src="assets/images/sangeet.jpg" alt="Event 4" class="w-full h-auto rounded-2xl border border-gold-soft shadow-elegant object-cover">
+                </div>
+                <br>
+                <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8" data-delay="400">
+                  <img src="assets/images/wedding.jpg" alt="Event 5" class="w-full h-auto rounded-2xl border border-gold-soft shadow-elegant object-cover">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Awaiting your gracious presence -->
+          <section class="relative py-10 px-6 bg-cream text-center">
+            <span class="pointer-events-none absolute top-6 left-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <span class="pointer-events-none absolute top-12 right-6 text-3xl opacity-20 font-emoji">🌸</span>
+            <span class="pointer-events-none absolute bottom-10 left-10 text-3xl opacity-20 font-emoji">🌼</span>
+            <span class="pointer-events-none absolute bottom-6 right-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8 relative max-w-2xl mx-auto">
+              <h2 class="font-script text-4xl sm:text-4xl text-rose-deep"> Awaiting your gracious presence</h2>
+              <div class="my-6 flex items-center justify-center gap-3 text-primary-foreground">
+                <span class="h-px w-16 bg-gold-soft"></span>
+                <span class="text-gold text-lg font-emoji">❀</span>
+                <span class="h-px w-16 bg-gold-soft"></span>
+              </div>
+              <p class="font-serif-display italic text-xl text-foreground/80 leading-relaxed">We look forward to celebrating this special occasion with you and creating cherished memories.</p>
+            </div>
+          </section>
+
+          <!-- Family / blessings -->
+          <section class="relative py-10 px-6 text-cream bg-cream">
+            <span class="pointer-events-none absolute top-6 left-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <span class="pointer-events-none absolute top-12 right-6 text-3xl opacity-20 font-emoji">🌸</span>
+            <span class="pointer-events-none absolute bottom-10 left-10 text-3xl opacity-20 font-emoji">🌼</span>
+            <span class="pointer-events-none absolute bottom-6 right-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <div class="relative max-w-5xl mx-auto text-center">
+              <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8">
+                <h2 class="font-script text-4xl sm:text-4xl text-rose-deep">With love</h2>
+                <p class="font-serif-display italic text-xl text-foreground/80 leading-relaxed">Lakshmi Chakravarthi &amp; Radhika</p>
+                <div class="my-6 flex items-center justify-center gap-3 text-primary-foreground">
+                  <span class="h-px w-16 bg-gold-soft"></span>
+                  <span class="text-gold text-lg font-emoji">❀</span>
+                  <span class="h-px w-16 bg-gold-soft"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Venue -->
+          <section class="relative py-20 px-6 bg-cream">
+            <span class="pointer-events-none absolute top-6 left-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <span class="pointer-events-none absolute top-12 right-6 text-3xl opacity-20 font-emoji">🌸</span>
+            <span class="pointer-events-none absolute bottom-10 left-10 text-3xl opacity-20 font-emoji">🌼</span>
+            <span class="pointer-events-none absolute bottom-6 right-4 text-4xl opacity-20 font-emoji">🌿</span>
+            <div class="relative max-w-4xl mx-auto text-center">
+              <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8">
+                <h2 class="font-script text-4xl sm:text-4xl text-rose-deep mt-2">Where We Celebrate</h2>
+                <div class="my-6 flex items-center justify-center gap-3 text-primary-foreground">
+                  <span class="h-px w-16 bg-gold-soft"></span>
+                  <span class="text-gold text-lg font-emoji">❀</span>
+                  <span class="h-px w-16 bg-gold-soft"></span>
+                </div>
+                <p class="font-serif-display italic text-xl text-foreground/80 leading-relaxed max-w-xl mx-auto">Royal County<br>Jammalamadugu Rd, Bypass Circle, Proddatur, Andhra Pradesh</p>
+              </div>
+
+              <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8 mt-10 rounded-2xl overflow-hidden border border-gold-soft shadow-elegant" data-delay="150">
+                <iframe title="Venue map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.72448453444!2d79.00000000000001!3d16.500000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb478f2dc4253c5%3A0xeb8d6dc464d14508!2sRoyal%20County!5e0!3m2!1sen!2sin!4v1639479999999!5m2!1sen!2sin" class="w-full h-[360px]" loading="lazy"></iframe>
+              </div>
+
+              <div class="reveal transition-all duration-1000 ease-out will-change-transform opacity-0 translate-y-8" data-delay="250">
+                <a href="https://www.google.com/maps/place/royal+county/data=!4m2!3m1!1s0x3bb478f2dc4253c5:0xeb8d6dc464d14508?sa=X&ved=1t:242&ictx=111" target="_blank" rel="noreferrer" class="inline-block mt-8">
+                  <button type="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 gradient-gold text-white border-0 hover:opacity-90 rounded-full px-8 shadow-gold h-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.94 11A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    Get Directions
+                  </button>
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- full-image lightbox with prev/next — opens directly to the first photo -->
+        <div id="gallery-lightbox" class="gallery-lightbox">
+          <button type="button" id="gallery-lightbox-close" aria-label="Close" class="gallery-icon-btn gallery-lightbox-close">✕</button>
+          <button type="button" id="gallery-lightbox-prev" aria-label="Previous photo" class="gallery-icon-btn gallery-lightbox-prev">‹</button>
+          <img id="gallery-lightbox-img" src="" alt="" class="gallery-lightbox-img">
+          <button type="button" id="gallery-lightbox-next" aria-label="Next photo" class="gallery-icon-btn gallery-lightbox-next">›</button>
+          <div id="gallery-lightbox-counter" class="gallery-lightbox-counter"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
