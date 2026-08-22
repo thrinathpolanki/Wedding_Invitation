@@ -1,193 +1,319 @@
-# Saiyam & Jenny — Wedding Invitation (static HTML/CSS/JS)
+<div align="center">
 
-Plain HTML/CSS/JS version of the invitation, no build tools, no React —
-just open `index.html` in a browser or upload the folder to any static host.
+<!-- ============ ANIMATED TYPING HEADER ============ -->
+<img src="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&size=32&duration=3000&pause=1000&color=C9556D&center=true&vCenter=true&width=940&lines=Welcome+to+the+Wedding+Invitation+Site+%F0%9F%92%8D;Envelope+Opening+%7C+Scratch-Card+Countdown;Engagement+Gallery+%7C+Flower+Rain+Animation;Pure+HTML+%E2%80%A2+CSS+%E2%80%A2+JavaScript+%E2%80%A2+No+Build+Step" alt="Typing SVG" />
 
-## Folder structure
+<!-- ============ BANNER ============ -->
+<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6E1F36,50:C9556D,100:D8B98A&height=220&section=header&text=Together%20Forever&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=A%20Digital%20Wedding%20Invitation%20Website&descAlignY=55&descSize=18" width="100%"/>
+
+<br/>
+
+<!-- ============ PROFILE VIEWS + VISITOR COUNTER ============ -->
+<img src="https://komarev.com/ghpvc/?username=<your-github-username>&label=Repository%20Views&color=C9556D&style=for-the-badge" alt="Repo Views"/>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=<your-github-username>.wedding-invitation-site&style=for-the-badge" alt="Visitor Badge"/>
+
+</div>
+
+<br/>
+
+<!-- ============ ANIMATED STATUS BADGES ============ -->
+<div align="center">
+
+<!-- 🔧 Replace <your-github-username> and <your-repo-name> below -->
+[![GitHub Stars](https://img.shields.io/github/stars/<your-github-username>/wedding-invitation-site?style=for-the-badge&logo=github&color=C9556D&labelColor=1a1210)](https://github.com/<your-github-username>/wedding-invitation-site/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/<your-github-username>/wedding-invitation-site?style=for-the-badge&logo=git&color=D8B98A&labelColor=1a1210)](https://github.com/<your-github-username>/wedding-invitation-site/network/members)
+[![Repo Size](https://img.shields.io/github/repo-size/<your-github-username>/wedding-invitation-site?style=for-the-badge&logo=databricks&color=E8879C&labelColor=1a1210)](https://github.com/<your-github-username>/wedding-invitation-site)
+[![Last Commit](https://img.shields.io/github/last-commit/<your-github-username>/wedding-invitation-site?style=for-the-badge&logo=git&color=8FA878&labelColor=1a1210)](https://github.com/<your-github-username>/wedding-invitation-site/commits/main)
+[![License](https://img.shields.io/github/license/<your-github-username>/wedding-invitation-site?style=for-the-badge&logo=open-source-initiative&color=orange&labelColor=1a1210)](./LICENSE)
+[![Made with Love](https://img.shields.io/badge/Made%20with-Love-C9556D?style=for-the-badge&logo=heart&logoColor=white&labelColor=1a1210)](#)
+
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 📖 About This Project
+
+A **fully self-contained, animated wedding invitation website** — no frameworks, no build tools, no server required. Just open `index.html` and it works. Built to feel like a real physical invitation: a wax-seal envelope that actually opens, a scratch-off card that reveals the wedding date, and a photo gallery guests can flip through one image at a time.
+
+> 🎯 **Goal:** A single-file-friendly, easy-to-customize invitation that anyone can host anywhere — Netlify, GitHub Pages, or a plain USB stick — and still feel premium and hand-crafted.
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 🗂️ Project Overview
+
+| Attribute | Details |
+|:--|:--|
+| 💍 **Purpose** | Digital Wedding Invitation Website |
+| 🏗️ **Stack** | `HTML5` · `CSS3` · `Vanilla JavaScript` — zero build step |
+| 📅 **Event Date** | `28th August 2026, 9:58 AM` |
+| 🧑‍💻 **Maintainer** | Thrinath |
+| 🔖 **Status** | 🟢 Actively Maintained |
+| 📜 **License** | `Personal / Family Use` |
+
+<br/>
+
+## ✨ What's Inside
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+
+### 🌿 Envelope Opening Intro
+A photo envelope with a real hinged flap that lifts open (CSS `rotateX` + bounce easing), a full-screen video plays, then smoothly fades into the invitation.
+
+</td>
+<td width="50%" valign="top">
+
+### 🎟️ Scratch-Card Countdown
+An ornate scalloped frame you scratch to reveal the wedding date and a live Days · Hours · Minutes · Seconds countdown — flowers rain down when it's revealed.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🖼️ Engagement Gallery
+Tap a photo to open a full-screen, one-at-a-time image viewer with next/previous navigation, swipe support, and arrow-key controls.
+
+</td>
+<td width="50%" valign="top">
+
+### 🗺️ Venue & Details
+Family blessings, event schedule, and an embedded Google Map with a one-tap "Get Directions" button straight to the venue.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 🌳 Folder Structure
+
 ```
-index.html
-favicon.ico
-assets/
-  css/
-    style.css     ← the site's ACTUAL compiled stylesheet, copied byte-for-byte
-                     (all real colors, gradients, shadows, keyframes — nothing rewritten)
-    custom.css    ← a few small additions on top (safe to edit)
-  js/
-    script.js     ← intro tap-to-open, scratch-to-reveal card, countdown,
-                     scroll-reveal animations, music toggle
-  fonts/
-    Candlescript.otf   ← the real script font file used for headings
-  images/
-    homehero.jpg, lunch.jpg, sangeet.jpg, mayra.jpg, wedding.jpg  ← PLACEHOLDERS
-    countdown-frame.png   ← PLACEHOLDER decorative frame for the scratch card
-    bg-texture.png        ← PLACEHOLDER subtle paper texture
-    intro-poster.jpg      ← the real poster image used behind the intro screen
+wedding-invitation-site/
+│
+├── 📄 index.html                  ← the whole invitation, single page
+├── 📄 favicon.ico
+├── 📄 README.md
+│
+├── 📁 assets/
+│   ├── 🎨 css/
+│   │   ├── style.css              ← exact compiled site stylesheet
+│   │   └── custom.css             ← envelope, scratch-card, gallery, flower rain
+│   ├── ⚙️ js/
+│   │   └── script.js              ← all interactivity, single file
+│   ├── 🔤 fonts/
+│   │   └── Candlescript.otf
+│   ├── 🖼️ images/
+│   │   ├── intro-poster.jpg       ← the envelope / flap photo
+│   │   ├── homehero.jpg           ← hero couple photo
+│   │   ├── countdown-frame.png    ← scalloped scratch-card frame
+│   │   └── lunch.jpg · sangeet.jpg · mayra.jpg · wedding.jpg
+│   └── 🎬 video/
+│       └── videodesign.mp4        ← plays when the envelope opens
+│
+└── 📁 gallery/
+    └── 1.jpg, DSC*.jpg, IMG_*.jpg  ← engagement photos (29 files)
 ```
 
-## Latest update (single-image gallery viewer + faster video fade-out)
+<br/>
 
-- **Gallery is no longer a grid.** Clicking `lunch.jpg` now opens
-  directly into the single full-image viewer (starting at photo 1),
-  with only prev/next navigation — no thumbnail grid step in between.
-  The old grid markup and CSS have been removed.
-- **Video fade-out shortened to 1 second** (was 2s). The hero photo
-  fade-in stays at 0.8s, so the full transition from "video ends" to
-  "hero fully visible" is now ~1.8s total. See
-  `fadeOutVideoThenRevealHero()` in `script.js`.
+## 🧩 How Each Piece Fits Together
 
-## Latest update (flower rain, faster fade-in, in-page gallery)
+| Folder / File | Description |
+|:--|:--|
+| `assets/css/style.css` | The site's real compiled stylesheet — colors, fonts, keyframes, copied byte-for-byte |
+| `assets/css/custom.css` | Every custom animation: envelope flap, flower rain, scratch card, gallery viewer |
+| `assets/js/script.js` | Countdown timer, scroll reveals, envelope logic, scratch-to-reveal, gallery navigation |
+| `assets/video/videodesign.mp4` | Your intro video — drop it in, already wired up |
+| `gallery/` | Your engagement photos — drop them in with the exact filenames listed inside |
 
-- **Flower rain replaces the party-popper confetti.** Tapping the
-  envelope now rains flower emojis down from the top of the screen
-  (staggered spawn + drift + rotation) instead of bursting outward from
-  the center. See `rainFlowers()` in `script.js`.
-- **Fade-in shortened to 0.8s.** The hero photo now fades in over 0.8s
-  after the video's 2s fade-out (previously 2s each way). Edit the
-  `"opacity 0.8s ease"` lines in `fadeOutVideoThenRevealHero()` /
-  `openInvitation()` in `script.js` to change it again. The video's 2s
-  fade-out itself is unchanged.
-- **The separate `engagement_gallery.html` page has been removed.**
-  Clicking the `lunch.jpg` photo now opens an **in-page gallery modal**
-  instead of a new tab — same grid-of-photos layout, same tap-to-open
-  full-image lightbox with prev/next, swipe, and arrow-key navigation,
-  just built directly into `index.html` (see `#gallery-modal` /
-  `#gallery-lightbox` and `initGallery()` in `script.js`).
-- **Add your photos** to the `gallery/` folder using the exact filenames
-  listed in `gallery/PUT_YOUR_PHOTOS_HERE.txt` (29 files, `1.jpg` first).
-  To change which photos appear or their order, edit the `files` array
-  inside `initGallery()` in `script.js`.
+<details>
+<summary><b>📂 Click to see how the envelope-open sequence works</b></summary>
 
-## Latest update (real envelope-flap animation + video card)
+```
+Tap envelope
+   │
+   ├─► Flap lifts open (rotateX + bounce easing)
+   ├─► Flowers rain from the top of the screen
+   ├─► Full-screen video plays (videodesign.mp4)
+   │
+   ▼
+Video ends ──► fades out (1s) ──► hero photo fades in (0.8s)
+```
 
-Rebuilt the intro to match the mechanic from your reference project
-(`mahiladinasya`) instead of the earlier whole-image tilt:
+</details>
 
-- **The envelope photo is now a literal hinged flap.** It's positioned
-  with `transform-origin: top center` and lifts open with `rotateX`,
-  using the same bounce easing (`cubic-bezier(0.68, -0.55, 0.27, 1.35)`)
-  as the reference project's `.envelope-flap`. See `#intro-poster` /
-  `#intro-poster.is-open` in `custom.css`.
-- **The video now plays full screen** — it covers the entire viewport
-  (`position: fixed; inset: 0`) once the flap opens, rather than a small
-  card.
-- **Confetti burst** is ported directly from the reference project's
-  `createConfettiBurst()` — same physics (gravity, velocity, rotation),
-  recolored to the site's rose/gold/sage palette.
-- Once the video finishes (`ended` event), the page crossfades smoothly
-  into the invitation, same as before. If the video can't play for any
-  reason, a ~9s safety timer opens the invitation anyway so no one gets
-  stuck on a closed envelope.
-- The envelope's "inside" (revealed once the flap lifts) is a soft
-  rose/cream gradient (`#envelope-body-bg`) — swap this for a different
-  color or pattern in `custom.css` if you'd like.
+<br/>
 
-## Latest update (countdown alignment + matching font)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
 
-- Fixed a bug where the Days/Hours/Minutes/Seconds boxes weren't the same
-  size (their width was accidentally driven by label text length), which
-  threw the row out of alignment on some screens. The row is now a strict
-  4-column grid so all four boxes are always identical size and sit
-  perfectly in one line, matching the reference image.
-- Countdown digits and labels now use the **same font family** as the
-  date title (Cormorant Garamond) — see `.countdown-num` /
-  `.countdown-label` in `custom.css` — instead of the previous mismatched
-  Cinzel font.
-- Labels shortened to "Min" / "Sec" so they don't crowd the row on small
-  screens; edit them in `index.html` if you'd prefer the full words.
+<br/>
 
-## Latest update (bigger date/countdown text + party-popper burst)
+## 🛠️ Tech Stack
 
-- Regenerated `countdown-frame.png` with a thinner scalloped border so the
-  transparent center window is much larger — this gives the date/time and
-  countdown room to be sized close to the reference image instead of being
-  shrunk down.
-- The date now uses a **drop-cap** treatment ("**2**8th **A**ugust 2026")
-  matching the reference's large-first-letter, small-caps look — see
-  `.frame-title .drop-cap` in `custom.css`.
-- Countdown digits and the "9:58 AM" time are sized up to match the
-  reference's proportions.
-- The scratch-reveal burst now mixes 🎉 🎊 ✨ in with the flower emojis for
-  a proper "party popper" feel.
+<div align="center">
 
-## Latest update (envelope crossfade + ornate scratch frame)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white)
+![No Build Step](https://img.shields.io/badge/Build%20Step-None-32CD32?style=for-the-badge&logo=vite&logoColor=white)
+![Responsive](https://img.shields.io/badge/Design-Responsive-FF69B4?style=for-the-badge&logo=responsive&logoColor=white)
 
-- **countdown-frame.png** is now a hand-drawn scalloped rose/sage-green
-  "plaque" frame (double scalloped border + scattered confetti flecks)
-  matching the reference design you shared, with a transparent center so
-  the live date/countdown renders inside it.
-- **Date title font**: "28th August 2026" now uses `Cormorant Garamond`
-  with `font-variant: small-caps` (see `.frame-title` in `custom.css`) to
-  match the elegant mixed-caps look of the reference frame's typography.
-- **Envelope open**: tapping the envelope now plays the tilt-back-and-fade
-  flap animation anchored near the top edge (like a real envelope flap
-  hinge), then **crossfades smoothly** straight into the invitation — no
-  white flash. The intro sits as a fixed full-screen layer on top of the
-  invitation and simply fades away.
-- **Flower burst**: scratching the card fully now bursts real flower
-  emojis (🌸🌿🌼🌷💐🌺❀) instead of confetti dots.
-- The frame's inner window is intentionally sized a bit smaller than the
-  scalloped opening so the card/canvas never pokes past the border —
-  if you resize the countdown text or digits, keep an eye on this.
+</div>
 
-## Intro & scratch card behavior (latest update)
+<br/>
 
-- **Tap to open**: tapping the envelope image now plays a real "envelope
-  opening" animation (scale up + flip back + fade), using the exact
-  `envelope-open` keyframe from the original site's own stylesheet — then
-  fades into the invitation. Swap `assets/images/intro-poster.jpg` for your
-  own envelope/poster photo any time; the animation applies to whatever
-  image is there.
-- **Scratch card**: the canvas markup matches exactly what you specified
-  (`width="512" height="343"`, `cursor-grab active:cursor-grabbing
-  touch-none rounded-lg`, `absolute inset-0 w-full h-full`). Scratching
-  (mouse or touch/pointer) erases the pink coating; once ~45% is cleared it
-  reveals **28th August 2026 · 9:58 AM** plus a live Days/Hours/Minutes/
-  Seconds countdown to that exact moment, and bursts flower emojis
-  (🌸🌿🌼🌷💐🌺❀) across the screen instead of confetti dots.
-- To change the date/time, edit the `TARGET` line near the top of
-  `assets/js/script.js` (keep the `+05:30` for India time, or change the
-  offset), and update the "28th August 2026" / "9:58 AM" text in
-  `index.html` to match.
+## 🎬 Animation Highlights
 
-## What's exact vs. what's a placeholder — please read
+- ✅ **Envelope flap** — real `rotateX` hinge animation with overshoot easing, not just a fade
+- ✅ **Flower rain** — staggered, drifting, rotating flower emojis fall from the top of the screen
+- ✅ **Scratch-to-reveal** — pointer-driven canvas erase effect revealing the date + live countdown
+- ✅ **Scroll reveals** — sections fade + slide into view via `IntersectionObserver`
+- ✅ **Video → hero crossfade** — 1s fade-out, 0.8s fade-in, no hard cuts
+- ✅ **Gallery viewer** — full-screen single-image navigation with swipe + keyboard support
 
-The site you linked is a **dynamic, JS-driven invitation** (built with Vite/React).
-Everything visual — colors, fonts, spacing, shadows, gradients, animation
-timings — was pulled directly from the site's real compiled CSS file and its
-JavaScript bundle, so those are exact:
+<br/>
 
-- Full color palette (rose/gold/cream HSL variables), gradients, box-shadows
-- Fonts: **Cormorant Garamond** (body/script text) and **Cinzel** (numbers/labels)
-  loaded from Google Fonts exactly as the original does, plus the real
-  **Candlescript.otf** script font
-- All real text content: the "Awaiting your gracious presence" copy, the
-  family/blessings names, "Club Babylon" venue + address, the Google Maps
-  embed, the 7th July 2026 date, and the countdown logic
-- Real animation/interaction logic: tap-to-open intro, scratch-to-reveal
-  countdown card (canvas-based erase effect + confetti burst), scroll
-  fade-up reveals, background-music toggle button
+## ✨ Project Features
 
-What could **not** be captured, because the automated cloning tool only
-recorded the very first screen (the wax-seal "Tap to open" intro) and never
-triggered a click to load what's behind it:
+| Feature | Description |
+|:--|:--|
+| 📱 **Fully Responsive** | Looks right from a small phone up to a wide desktop |
+| 🖋️ **Matching Typography** | Cormorant Garamond + Cinzel + Candlescript throughout, no mismatched fonts |
+| 🎨 **Exact Color Palette** | Rose, gold, and sage tones pulled directly from the original design |
+| 🔊 **Background Music Toggle** | One-tap mute/unmute once the invitation opens |
+| 🗺️ **Embedded Map** | Google Maps embed + "Get Directions" button |
+| 🧵 **Zero Dependencies** | No npm, no bundler, no framework — just open the file |
 
-- The 5 real photos (hero photo + 4 event photos) — currently simple
-  labelled placeholder images at `assets/images/*.jpg`
-- The decorative scratch-card frame artwork — currently a simple
-  approximation at `assets/images/countdown-frame.png`
-- The subtle repeating paper background texture — currently a plain
-  approximation at `assets/images/bg-texture.png`
-- The intro video (`intro-compressed.mp4`) and background music
-  (`background.mp3`) — not included; the site still works fine without them
-  (tapping the intro just fades straight to the invitation after ~1s)
+<br/>
 
-## How to customize
-- **Swap photos**: replace the files in `assets/images/` with your own,
-  keeping the same filenames (or update the `src` in `index.html`).
-- **Change text/names/venue**: edit the text directly inside `index.html`.
-- **Add the real intro video**: drop an `intro-compressed.mp4` into a new
-  `assets/video/` folder — it's already wired up in `index.html`.
-- **Add background music**: drop an mp3 into `assets/audio/background.mp3`
-  — already wired up.
-- **Fonts**: `Cormorant Garamond` and `Cinzel` load from Google Fonts;
-  `Candlescript` is bundled locally in `assets/fonts/`.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 🗺️ Roadmap
+
+- [x] 🌿 Envelope-flap opening animation
+- [x] 🎬 Full-screen intro video with smooth crossfade
+- [x] 🌸 Flower rain on envelope open
+- [x] 🎟️ Scratch-card countdown with live timer
+- [x] 🖼️ Full-screen engagement gallery viewer
+- [ ] 📸 Add real event & engagement photos
+- [ ] 🎥 Add real `videodesign.mp4`
+- [ ] 🎵 Add real background music track
+- [ ] ✅ Optional: add an RSVP form
+
+<br/>
+
+## 📏 Customization Rules
+
+- 📁 Keep the `assets/` folder structure — file paths are hard-coded in `index.html`
+- 🖼️ Photos in `gallery/` must match the exact filenames in `gallery/PUT_YOUR_PHOTOS_HERE.txt`
+- 🎬 The intro video must be named exactly `videodesign.mp4` inside `assets/video/`
+- ✏️ Text, names, and the event date live directly inside `index.html` — no CMS, just edit and save
+- 🎨 Colors and animation timing live in `assets/css/custom.css` and `assets/js/script.js`
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 💻 How to Use This Project
+
+```bash
+# 1. Unzip the project
+unzip wedding-invitation-site.zip
+cd wedding-invitation-site
+
+# 2. Add your media
+#    - drop your photos into gallery/  (see PUT_YOUR_PHOTOS_HERE.txt)
+#    - drop your video into assets/video/videodesign.mp4
+
+# 3. Open it — no server required
+open index.html        # macOS
+start index.html        # Windows
+xdg-open index.html     # Linux
+```
+
+<br/>
+
+## ▶️ Hosting It Online
+
+```bash
+# Option A — Netlify / Vercel drag-and-drop
+#   Just drag the whole folder into the deploy dashboard
+
+# Option B — GitHub Pages
+git init
+git add .
+git commit -m "Wedding invitation site"
+git branch -M main
+git remote add origin https://github.com/<your-github-username>/wedding-invitation-site.git
+git push -u origin main
+# then enable Pages in the repo settings
+```
+
+> 💡 **Tip:** Because there's no build step, any static host works — GitHub Pages, Netlify, Vercel, or even a plain shared-hosting FTP upload.
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<br/>
+
+## 📬 Contact
+
+<div align="center">
+
+<!-- 🔧 Replace all placeholder links below with your actual profiles -->
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thrinathpolanki)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thrinathpolanki)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:polankithrinath@gmail.com)
+
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%" height="4px"/>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:D8B98A,50:C9556D,100:6E1F36&height=150&section=footer" width="100%"/>
+
+  <br/>
+
+  ### Made with 💍 by **Thrinath**
+
+  <img src="https://komarev.com/ghpvc/?username=<your-github-username>&label=Thanks%20for%20visiting&color=C9556D&style=flat-square" alt="Thanks Badge"/>
+
+</div>
